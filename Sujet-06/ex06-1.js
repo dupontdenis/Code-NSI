@@ -1,39 +1,18 @@
-// La fonction `recherche` prend en paramètres deux chaines de caractères `gene` et
-// `seq_adn` et renvoie `True` si on retrouve `gene` dans `seq_adn` et `False` sinon.
-
-// def recherche(gene, seq_adn):
-//     n = len(seq_adn)
-//     g = len(gene)
-//     i = 0
-//     trouve = False
-//     while i < n-g+1 and trouve == False :
-//         j = 0
-//         while j < g and gene[j] == seq_adn[i+j]:
-//             j += 1
-//         if j == g:
-//             trouve = True
-//         i += 1
-//     return trouve
-
-const recherche = function (gene, seq_adn){
-    const n = seq_adn.length;
-    const g = gene.length;
-    let trouve = false;
-    let i = 0;
-
-    while (i < n-g+1 && trouve == false){
-        let j = 0;
-        while (j < g && gene[j] == seq_adn[i+j]){
-            j += 1;
-        }
-        if (j == g ){
-                trouve = true
-        }
-        i += 1
+const maxi = function(array){
+    let max = array[0];
+    let indexMax = 0;
+    for (let index = 0; index < array.length; index++) {
+        if ( array[index] > max ) {
+            max= array[index];
+            indexMax = index;
+        }      
     }
-    return trouve
+    return [max,indexMax]
 }
 
+console.table(maxi([1,5,6,9,1,2,3,7,9,8]))
 
-console.log(recherche("AATC", "GTACAAATCTTGCC"));
-console.log(recherche("AGTC", "AAGTCGCC"))
+const [max,i] = maxi([1,5,6,9,1,2,3,7,9,8])
+console.log(`la valeur max est ${max} à l'index ${i}`)
+
+
