@@ -18,16 +18,16 @@
 const Pieces = [100, 50, 20, 10, 5, 2, 1];
 const rendu_glouton = function (arendre, solution = [], i = 0) {
 
-    if (arendre == 0) {
+    if (aRendre == 0) {
         return solution;
     }
     const p = Pieces[i];
     if (p <= arendre) {
         solution.push(p)
-        return rendu_glouton(arendre - p, solution, i)
+        return rendu_glouton(aRendre - p, solution, i)
     }
     else {
-        return rendu_glouton(arendre, solution, ++i)
+        return rendu_glouton(aRendre, solution, ++i)
     }
 }
 console.log(rendu_glouton(68, [], 0));
