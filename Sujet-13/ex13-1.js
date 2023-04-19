@@ -1,19 +1,21 @@
-const Pieces = [100,50,20,10,5,2,1];
-const rendu_glouton = function (arendre, solution=[], i=0) {
-   
-    if (arendre == 0) {
-        return solution;
-    }
-    const p = Pieces[i];
-    if (p <= arendre) {
-        solution.push(p)
-        return rendu_glouton(arendre - p, solution, i)
-    }
-    else {
-        return rendu_glouton(arendre, solution, ++i)
-    }
+const pieces = [5, 2, 1];
+
+const rendu = (aRendre = 0) => {
+
+  // const retour = Array.from({ length: pieces.length }, v => 0);
+
+  const retour = [];
+
+  let reste = aRendre;
+
+  pieces.forEach((piece, i) => {
+    retour.push(Math.ceil(reste / piece));
+    reste = reste % piece;
+  });
+  return retour;
 }
-console.log(rendu_glouton(68,[],0));
+
+console.log(rendu(20))
  
 
 // 
