@@ -19,7 +19,7 @@ console.log(rendu(20))
  
 
 // 
-const rendu = Pieces.reduce( (acc, piece) => {
+const rendu = pieces.reduce( (acc, piece) => {
    const nbPiece = Math.floor(acc.aRendre/piece);
    if (nbPiece==0) {
     return acc
@@ -30,4 +30,4 @@ const rendu = Pieces.reduce( (acc, piece) => {
 }, {aRendre:151})
  
 delete rendu.aRendre
-const r = Object.assign( {100:0,50:0,20:0,10:0,5:0,2:0,1:0}, rendu.aRendre)
+const r = Object.assign( {100:0,50:0,20:0,10:0,5:0,2:0,1:0}, rendu)
