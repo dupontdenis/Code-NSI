@@ -55,5 +55,5 @@ const recherche2 = function (char, mot) {
 function recherche3(str, char) {
     return str.split('').reduce((a, x) => x === char ? ++a : a, 0);
 }
-console.log(recherche2('p','mississippi'));
+console.log(recherche3('p','mississippi'));
 
