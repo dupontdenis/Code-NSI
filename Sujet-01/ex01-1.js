@@ -57,3 +57,5 @@ function recherche3(str, char) {
 }
 console.log(recherche3('p','mississippi'));
 
+// et encore le code avec Array.from('mississippi') qui renvoie
+// (11) ['m', 'i', 's', 's', 'i', 's', 's', 'i', 'p', 'p', 'i']
