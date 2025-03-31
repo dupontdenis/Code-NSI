@@ -42,7 +42,7 @@ function rendreLaMonnaieWhile(somme) {
 
 // Exemple d'utilisation
 const somme = 230;
-console.log(JSON.stringify(rendreLaMonnaieWhile(somme)));
+console.log(rendreLaMonnaieWhile(somme));
 
 
 
