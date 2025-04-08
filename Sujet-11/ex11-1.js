@@ -18,7 +18,7 @@ const recherche2 = (array, val) => {
 }
 console.log(recherche2([2, 3, 4, 5, 6], -2))
 
-//dicotomie
+//************************************************ dichotomie ********************************************
 function binarySearch(arr, target) {
     let left = 0;
     let right = arr.length - 1;
