@@ -28,3 +28,5 @@ const delta2 = (array)=>{
 console.log(delta2([1000, 800, 802, 1000, 1003]))
 // [1000, -200, 2, 198, 3]
 console.log( delta2([42]) )
+
+// par dichotomie voir code py 
